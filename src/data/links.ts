@@ -7,7 +7,7 @@ export type LinkItem = {
 export const profile = {
   name: "바다",
   bio: "바다에 누워서",
-  imageUrl: "https://placehold.co/150x150/orange/white",
+  imageUrl: "https://placehold.co/150x150/orange/white.png",
 };
 
 export const links: LinkItem[] = [
