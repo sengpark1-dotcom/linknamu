@@ -5,8 +5,9 @@ export type LinkItem = {
 };
 
 export const profile = {
-  name: "바다 위에서",
-  bio: "일상과 생각을 기록합니다",
+  name: "바다",
+  bio: "바다에 누워서",
+  imageUrl: "https://placehold.co/150x150/orange/white",
 };
 
 export const links: LinkItem[] = [
