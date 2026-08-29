@@ -20,7 +20,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100">
+      <body className="min-h-screen bg-[linear-gradient(135deg,#fff8f0_0%,#ffecd6_35%,#ffe1e6_70%,#ffd7e6_100%)] font-sans text-stone-800 antialiased dark:bg-[linear-gradient(135deg,#1a1420_0%,#241826_40%,#2b1b22_70%,#1f1420_100%)] dark:text-stone-100">
         {children}
       </body>
     </html>
