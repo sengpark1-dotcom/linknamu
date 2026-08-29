@@ -11,7 +11,7 @@ export const profile = {
 };
 
 export const links: LinkItem[] = [
-  { id: "blog", title: "블로그", url: "https://example.com/blog" },
-  { id: "instagram", title: "인스타그램", url: "https://instagram.com" },
-  { id: "youtube", title: "유튜브", url: "https://youtube.com" },
+  { id: "github", title: "🐈‍⬛ 깃허브", url: "https://github.com/sengpark1-dotcom" },
+  { id: "youtube", title: "📺 유튜브", url: "https://www.youtube.com/@STANDSEA" },
+  { id: "email", title: "📫 이메일", url: "mailto:parksh@tomoon.co.kr" },
 ];
