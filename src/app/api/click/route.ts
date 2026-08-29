@@ -1,6 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getMongoClientPromise } from "@/lib/mongodb";
 
+export async function GET() {
+  try {
+    const client = await getMongoClientPromise();
+    const db = client.db(process.env.MONGODB_DB || "linknamu");
+    const docs = await db
+      .collection("linkClicks")
+      .find({}, { projection: { _id: 0, linkId: 1, clickCount: 1 } })
+      .toArray();
+
+    const counts = Object.fromEntries(
+      docs.map((doc) => [doc.linkId, doc.clickCount ?? 0])
+    );
+
+    return NextResponse.json({ counts });
+  } catch (error) {
+    console.error("클릭 수 조회 실패:", error);
+    return NextResponse.json({ error: "failed to fetch click counts" }, { status: 500 });
+  }
+}
+
 export async function POST(request: NextRequest) {
   const { linkId } = await request.json();
 
